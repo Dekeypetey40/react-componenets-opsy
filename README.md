@@ -2,6 +2,10 @@
   React, Tailwind CSS & Vite Starter Template 
 </h3>
 <br/>
+<h4 align="center">
+  Created by yigitaksoy 
+</h4>
+<br/>
 
 ![React Tailwind CSS & Vite Starter Template](public/screenshot.png)
 
