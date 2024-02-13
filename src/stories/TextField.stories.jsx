@@ -12,9 +12,10 @@ export default {
 
 const Template = (args) => <TextField {...args} />;
 
-export const Basic = Template.bind({});
-Basic.args = {
+export const Text = Template.bind({});
+Text.args = {
   label: "Label",
   value: "",
   onChange: () => {},
+  count: 3,
 };
