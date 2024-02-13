@@ -1,0 +1,16 @@
+.textfield-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+.textfield {
+    border: none;
+    border-bottom: 2px solid lightgrey;
+    padding: 8px;
+    width: fit-content;
+}
+
+.textfield:focus {
+    border-color: lightblue;
+    outline: none;
+}

@@ -1,8 +1,8 @@
 import React from "react";
-import TextField from "../components/TextField/TextField";
+import TextField from "../components/Field/TextField.jsx";
 
 export default {
-  title: "Components/TextField",
+  title: "Components/Fields",
   component: TextField,
   parameters: {
     layout: "centered",
@@ -12,8 +12,8 @@ export default {
 
 const Template = (args) => <TextField {...args} />;
 
-export const Default = Template.bind({});
-Default.args = {
+export const Basic = Template.bind({});
+Basic.args = {
   label: "Label",
   value: "",
   onChange: () => {},
