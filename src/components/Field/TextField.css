@@ -1,13 +1,15 @@
 .textfield-container {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    padding: 10px;
   }
 
 .textfield {
     border: none;
     border-bottom: 2px solid lightgrey;
     padding: 8px;
-    width: fit-content;
+    width: 100%;
 }
 
 .textfield:focus {
