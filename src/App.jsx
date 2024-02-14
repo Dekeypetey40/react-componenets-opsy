@@ -3,7 +3,7 @@ import "./assets/css/style.css";
 import TextField from "./components/Field/TextField";
 
 function App() {
-  const [texts, setTexts] = useState(["", "", ""]); // Initialize state with three empty strings
+  const [texts, setTexts] = useState(["", ""]); // Initialize state with 2 empty strings
 
   const handleTextChange = (index) => (event) => {
     const newValues = [...texts];
