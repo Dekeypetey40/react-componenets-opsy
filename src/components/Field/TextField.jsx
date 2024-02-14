@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import "./TextField.css"; // Import the CSS file
+import "./Fields.css"; // Import the CSS file
 import React, { useState } from "react";
 
 const TextField = ({ label, value, onChange, required }) => {

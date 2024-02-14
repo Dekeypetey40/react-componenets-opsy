@@ -16,3 +16,16 @@
     border-color: lightblue;
     outline: none;
 }
+
+.radiofield-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 10px;
+  }
+
+.radiofield-input {
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin-left: 15px;
+}

@@ -1,11 +1,13 @@
 import React from "react";
+import "./Fields.css";
 
 const RadioButton = ({ options, name, value, onChange }) => {
   return (
-    <div>
+    <div className="radiofield-container">
       {options.map((option, index) => (
         <label key={index}>
           <input
+            className="radiofield-input"
             type="radio"
             name={name}
             value={option.value}
