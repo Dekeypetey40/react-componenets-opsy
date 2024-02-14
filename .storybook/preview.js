@@ -1,4 +1,4 @@
-import '../src/components/Field/TextField.css';
+import '../src/components/Field/Fields.css';
 /** @type { import('@storybook/react').Preview } */
 const preview = {
   parameters: {

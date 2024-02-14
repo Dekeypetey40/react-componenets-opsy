@@ -2,9 +2,44 @@ import { useState } from "react";
 import "./assets/css/style.css";
 import TextField from "./components/Field/TextField";
 import RadioButton from "./components/Field/RadioField";
+import DateField from "./components/Field/DateField";
 
 function App() {
   const [selectedOption, setSelectedOption] = useState("");
+  const [startDate, setStartDate] = useState("");
+  const [endDate, setEndDate] = useState("");
+
+  const handleStartDateChange = (value) => {
+    if (endDate) {
+      // Only perform validation if endDate has a value
+      const startDateValue = new Date(value);
+      const endDateValue = new Date(endDate);
+
+      if (startDateValue < endDateValue) {
+        setStartDate(value);
+      } else {
+        alert("Start date must be before end date");
+      }
+    } else {
+      setStartDate(value); // If endDate doesn't have a value, just set the start date
+    }
+  };
+
+  const handleEndDateChange = (value) => {
+    if (startDate) {
+      // Only perform validation if startDate has a value
+      const startDateValue = new Date(startDate);
+      const endDateValue = new Date(value);
+
+      if (endDateValue > startDateValue) {
+        setEndDate(value);
+      } else {
+        alert("End date must be after start date");
+      }
+    } else {
+      setEndDate(value); // If startDate doesn't have a value, just set the end date
+    }
+  };
 
   const handleChange = (event) => {
     setSelectedOption(event.target.value);
@@ -47,6 +82,18 @@ function App() {
             name="options"
             value={selectedOption}
             onChange={handleChange}
+          />
+        </div>
+        <div className="datefield-container">
+          <DateField
+            label="Från"
+            value={startDate}
+            onChange={(event) => handleStartDateChange(event.target.value)}
+          />
+          <DateField
+            label="Till"
+            value={endDate}
+            onChange={(event) => handleEndDateChange(event.target.value)}
           />
         </div>
       </div>
