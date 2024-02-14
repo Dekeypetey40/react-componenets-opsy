@@ -57,7 +57,9 @@ function App() {
   return (
     <>
       <div className="container mx-auto">
-        <h1 className="text-4xl font-bold text-center my-8">Storybook</h1>
+        <h1 className="text-4xl font-bold text-center my-8">
+          Storybook Components
+        </h1>
         <TextField
           label="Label 1"
           value={value1}
