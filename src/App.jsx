@@ -21,7 +21,6 @@ function App() {
           onChange={handleTextChange(index)}
         />
       ))}
-      {/* Rest of your App components */}
     </div>
   );
 }

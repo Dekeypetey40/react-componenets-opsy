@@ -14,7 +14,7 @@ const Template = (args) => <TextField {...args} />;
 
 export const Text = Template.bind({});
 Text.args = {
-  labels: ["Label 1", "Label 2", "Label 3"],
+  label: ["Label 1", "Label 2", "Label 3"],
   value: "",
   onChange: () => {},
   count: 2,
