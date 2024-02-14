@@ -5,6 +5,10 @@ import RadioField from "../components/Field/RadioField";
 export default {
   title: "Components/Fields",
   component: RadioField,
+  parameters: {
+    layout: "centered",
+    tags: ["autodocs"],
+  },
 };
 
 const Template = (args) => <RadioField {...args} />;
