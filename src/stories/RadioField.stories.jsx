@@ -9,6 +9,13 @@ export default {
     layout: "centered",
     tags: ["autodocs"],
   },
+  argTypes: {
+    onChange: { action: "changed" },
+    control: {
+      type: "radio",
+      options: "object",
+    },
+  },
 };
 
 const Template = (args) => <RadioField {...args} />;
@@ -18,8 +25,12 @@ Radio.args = {
   options: [
     { label: "Option 1", value: "1" },
     { label: "Option 2", value: "2" },
+    { label: "Option 3", value: "3" },
   ],
   name: "options",
   value: "1",
-  onChange: action("changed"),
+  onChange: (event) => {
+    Radio.args.value = event.target.value;
+    action("changed")(event);
+  },
 };
