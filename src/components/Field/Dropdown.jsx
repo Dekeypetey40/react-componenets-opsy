@@ -10,7 +10,7 @@ const Dropdown = ({ options }) => {
   return (
     <select value={selectedOption} onChange={handleSelectChange}>
       {options.map((option, index) => (
-        <option key={index} value={option}>
+        <option className="textfield" key={index} value={option}>
           {option}
         </option>
       ))}
