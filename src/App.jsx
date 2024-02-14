@@ -3,11 +3,13 @@ import "./assets/css/style.css";
 import TextField from "./components/Field/TextField";
 import RadioButton from "./components/Field/RadioField";
 import DateField from "./components/Field/DateField";
+import Dropdown from "./components/Field/Dropdown";
 
 function App() {
   const [selectedOption, setSelectedOption] = useState("");
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
+  const dropdown = ["Option 1", "Option 2", "Option 3"];
 
   const handleStartDateChange = (value) => {
     if (endDate) {
@@ -97,6 +99,9 @@ function App() {
             value={endDate}
             onChange={(event) => handleEndDateChange(event.target.value)}
           />
+        </div>
+        <div>
+          <Dropdown options={dropdown} />
         </div>
       </div>
     </>
